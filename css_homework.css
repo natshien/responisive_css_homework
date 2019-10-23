@@ -1,0 +1,735 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .top-menu {
+        color: #666;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-menu h2 {
+        font-size: 18px;
+        padding: 5px;
+        color: rgb(37, 156, 101);
+        margin-top: 10px;
+    }
+    
+    .menu {
+        display: flex; 
+        flex-flow: row wrap;
+        justify-content: space-between;
+        list-style-type: none;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .menu li { 
+        padding: 10px;
+        text-decoration: none;
+        color: #666;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    
+    .menu > li:hover {
+        background-color: rgb(37, 156, 101);
+        color: white;
+    }
+
+    .info {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-image: url("./img/sunrise.jpg");
+        background-size: cover;
+        background-position: center;
+        margin-top: 10px;
+    }
+
+    .info h3 {
+        padding: 10px;
+        text-align: center;
+        background-color:  rgba(37, 156, 101, 0.4)
+    }
+
+    .info p {
+        padding: 20px; 
+        background-color: rgba(0,0,0,0.4);
+        text-align: center;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .download-bar {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        background-color:  rgb(37, 156, 101);
+        margin-bottom: 20px;
+    }
+    .download-bar h4 {
+        padding: 10px;
+    }
+    .download-bar button {
+        background-color:  rgb(37, 156, 101);
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        border: 1px solid white;
+        border-radius: 3px;
+        padding: 5px;
+        height: 40px;
+        align-self: center;
+        margin-right: 10px;
+    }
+    
+    .post {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        padding: 10px;
+
+    }
+    .post p {
+        font-size: 12px;
+
+    }
+    .post .details:after {
+        content:' ';
+        display: block;
+        height: 1px;
+        width: 100%;
+        text-align: center;
+        background-color: #666; 
+        margin-bottom: 10px;
+    }
+
+    .post .textfield {
+        display: flex;
+        flex-direction: column;
+        text-align: flex-start;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .post .main .preview img {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .post .main p {
+        padding-bottom: 10px;
+    }
+    .post .main .preview .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .post .main .preview .content button {
+        margin-bottom: 20px;
+        color: rgb(37, 156, 101);
+        background-color: white;
+        border-radius: 5px;
+        width: 40%;
+        height: 30px;
+        border: solid 1px #999;
+    }
+    .search {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px;
+        padding: 5px 20px;
+    }
+    .search input {
+        flex: 6;
+        border: none;
+        border-bottom: #999 solid 1px;
+    }
+    .search button {
+        background-color: rgb(37, 156, 101);
+        border-radius: 5px;
+        flex: 1;
+        border: none;
+    }
+    .fa-search {
+        width: 12px;
+        height: 12px;
+        padding: 3px
+    }
+    .tabContainer {
+        width: 100%;
+        height: 300px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .tabContainer .buttonsContainer {
+        height: 30px;
+    }
+    .tabContainer .buttonsContainer button {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 50%;
+        height: 20px;
+        float: left;
+        border-left: solid 1px #999;
+        border-top: solid 1px #999;
+        border-right: none;
+        border-bottom: none;
+        outline: none;
+        padding: 10px;
+        background-color: white;
+    }
+    .tabContainer .tabPanel.popular {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+    }
+    .tabContainer .tabPanel.popular article {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 10px auto;
+    }
+    .tabContainer .tabPanel.popular article p:after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #666;
+        margin: 5px auto;
+    }
+    .tabContainer .tabPanel.popular article img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    .tabContainer .tabPanel.recent {
+        font-family: Arial, Helvetica, sans-serif;
+        display: none;
+        padding: 20px;
+    }
+    .tabContainer .tabPanel.recent article {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 10px auto;
+    }
+    .tabContainer .tabPanel.recent article p:after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #666;
+        margin: 5px auto;
+    }
+    .tabContainer .tabPanel.recent article img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+    .top-menu {
+        color:  rgb(37, 156, 101);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+
+    .top-menu h2 {
+        font-size: 18px;
+        padding: 5px;
+        line-height: 30px;
+        padding-top: 5px;
+    }
+    
+    .menu {
+        display: flex; 
+        flex-flow: row wrap;
+        justify-content: space-between;
+        list-style-type: none;
+        padding-bottom: 10px;
+        padding-right: 10px;
+    }
+    
+    .menu li { 
+        padding: 10px;
+        text-decoration: none;
+        color: #666;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    
+    .menu > li:hover {
+        background-color: rgb(37, 156, 101);
+        color: white;
+    }
+
+    .info {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-image: url("./img/sunrise.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+
+       ;
+    }
+    .info h3 {
+        padding: 10px;
+        text-align: left;
+        background-color:  rgba(37, 156, 101, 0.4);
+        width: 355px;
+    }
+    .info p {
+        padding: 10px;
+        background-color: rgba(0,0,0,0.4);
+        text-align: left;
+        font-size: 12px;
+        width: 470px;
+    }
+    .download-bar {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        background-color:  rgb(37, 156, 101);
+        margin-bottom: 20px;
+        line-height: 50px;
+    }
+    .download-bar h4 {
+        padding: 10px;
+    }
+    .download-bar button {
+        background-color:  rgb(37, 156, 101);
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        border: 1px solid white;
+        border-radius: 3px;
+        padding: 5px;
+        height: 40px;
+        align-self: center;
+        margin-right: 10px;
+    }
+    
+    .post {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 50px;
+    }
+    .textfield {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .textfield:after {
+        content:' ';
+        display: block;
+        height: 1px;
+        width: 100%;
+        align-self: center;
+        background-color: #999; 
+        margin: 10px auto;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        margin: 10px;
+    }
+    .preview {
+        display: flex;
+        flex-direction: row;
+    }
+    .preview img {
+        flex: 1;
+        width: 50%;
+        height: 100%;
+        margin: 5 px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin: 5px;
+    }
+    .content p {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 5px;
+    }
+    .content button {
+        margin-bottom: 20px;
+        color: rgb(37, 156, 101);
+        background-color: white;
+        border-radius: 5px;
+        width: 40%;
+        height: 30px;
+        align-self: flex-end;
+        border: solid 1px #999;
+        margin-top: 30px;
+    }
+    .search {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 35px;
+        margin: 0 auto;
+        padding: 5px 20px;
+    }
+    .search input {
+        flex: 6;
+        height: 100%;
+    }
+    .search button {
+        background-color: rgb(37, 156, 101);
+        border-radius: 5px;
+        flex: 1;
+        height: 100%;
+        border: none;
+    }
+    .tabContainer {
+        width: 100%;
+        height: 300px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .tabContainer .buttonsContainer {
+        height: 30px;
+    }
+    .tabContainer .buttonsContainer button {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 50%;
+        height: 30px;
+        float: left;
+        border-left: solid 1px #666;
+        border-top: solid 1px #666;
+        border-right: solid 1px #666;
+        border-bottom: none;
+        outline: none;
+        padding: 10px;
+        background-color: white;
+    }
+    .tabContainer .tabPanel.popular {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+        border: solid 1px #666;
+    }
+    .tabContainer .tabPanel.popular article {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 10px auto;
+    }
+    .tabContainer .tabPanel.popular article p {
+        flex: 1;
+    }
+    .tabContainer .tabPanel.popular article p:after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #666;
+        margin: 5px auto;
+    }
+    .tabContainer .tabPanel.popular article img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    .tabContainer .tabPanel.recent {
+        font-family: Arial, Helvetica, sans-serif;
+        display: none;
+        padding: 20px;
+    }
+    .tabContainer .tabPanel.recent article {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 10px auto;
+    }
+    .tabContainer .tabPanel.recent article p:after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #666;
+        margin: 5px auto;
+    }
+    .tabContainer .tabPanel.recent article img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+}
+@media only screen and (min-width: 1001px) {
+    .top-menu {
+        color:  rgb(37, 156, 101);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px;
+    }
+
+    .top-menu h2 {
+        font-size: 24px;
+        padding: 5px;
+        line-height: 30px;
+        padding-top: 5px;
+    }
+    
+    .menu {
+        display: flex; 
+        flex-flow: row wrap;
+        justify-content: space-between;
+        list-style-type: none;
+        padding-bottom: 10px;
+        padding-right: 10px;
+    }
+    .menu li { 
+        padding: 10px;
+        text-decoration: none;
+        color: #666;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    
+    .menu > li:hover {
+        background-color: rgb(37, 156, 101);
+        color: white;
+        cursor: pointer;
+    }
+
+    .info {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-image: url("./img/sunrise.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+
+       ;
+    }
+    .info h3 {
+        padding: 10px;
+        text-align: left;
+        background-color:  rgba(37, 156, 101, 0.4);
+        width: 415px;
+        margin-left: 40px;
+        font-size: 22px;
+    }
+    .info p {
+        padding: 10px;
+        background-color: rgba(0,0,0,0.4);
+        text-align: left;
+        font-size: 18px;
+        width: 650px;
+        margin-left: 40px;
+        line-height: 20px;
+    }
+    .download-bar {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        background-color:  rgb(37, 156, 101);
+        margin-bottom: 20px;
+        line-height: 50px;
+    }
+    .download-bar h4 {
+        padding: 10px;
+    }
+    .download-bar button {
+        background-color:  rgb(37, 156, 101);
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        border: 1px solid white;
+        border-radius: 3px;
+        padding: 10px;
+        height: 50px;
+        align-self: center;
+        margin-right: 10px;
+    }
+
+    .post {
+        display: flex;
+        flex-direction: row;
+        margin: 30px 50px;
+    }
+    .textfield {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .textfield:after {
+        content:' ';
+        display: block;
+        height: 1px;
+        width: 100%;
+        align-self: center;
+        background-color: #999; 
+        margin: 10px auto;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        margin: 10px;
+    }
+    .preview {
+        display: flex;
+        flex-direction: row;
+    }
+    .preview img {
+        flex: 1;
+        width: 50%;
+        height: 100%;
+        margin: 5 px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin: 5px;
+    }
+    .content p {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 5px;
+    }
+    .content button {
+        margin-bottom: 20px;
+        color: rgb(37, 156, 101);
+        background-color: white;
+        border-radius: 5px;
+        width: 40%;
+        height: 30px;
+        align-self: flex-end;
+        border: solid 1px #999;
+        margin-top: 30px;
+    }
+    .side {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin: 10px;
+    }
+    .search {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 30px;
+        height: 35px;
+    }
+    .search input {
+        flex: 6;
+        height: 100%;
+        width: 60px;
+    }
+    .search button {
+        background-color: rgb(37, 156, 101);
+        border-radius: 5px;
+        flex: 1;
+        border: none;
+        height: 100%;
+    }
+    .search img {
+        width: 20px;
+        height: 15px;
+        padding: 3px;
+    }
+    .tabContainer {
+        width: 100%;
+        height: 300px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .tabContainer .buttonsContainer {
+        height: 30px;
+    }
+    .tabContainer .buttonsContainer button {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 50%;
+        height: 30px;
+        float: left;
+        border-top: solid 1px #666;
+        border-left: solid 1px #666;
+        border-right: none;
+        border-bottom: none;
+        outline: none;
+        padding: 10px;
+        background-color: white;
+    }
+    .tabContainer .tabPanel.popular {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+        border: solid 1px #666;
+    }
+    .tabContainer .tabPanel.popular article {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 10px auto;
+    }
+    .tabContainer .tabPanel.popular article p {
+        flex: 1;
+    }
+    .tabContainer .tabPanel.popular article p:after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #666;
+        margin: 5px auto;
+    }
+    .tabContainer .tabPanel.popular article img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    .tabContainer .tabPanel.recent {
+        font-family: Arial, Helvetica, sans-serif;
+        display: none;
+        padding: 20px;
+    }
+    .tabContainer .tabPanel.recent article {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 10px auto;
+    }
+    .tabContainer .tabPanel.recent article p:after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #666;
+        margin: 5px auto;
+    }
+    .tabContainer .tabPanel.recent article img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+}
